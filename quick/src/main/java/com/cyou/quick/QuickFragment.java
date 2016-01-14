@@ -7,8 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.hannesdorfmann.fragmentargs.FragmentArgs;
-
 import butterknife.ButterKnife;
 
 /**
@@ -42,7 +40,7 @@ public abstract class QuickFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        FragmentArgs.inject(this);
+//        FragmentArgs.inject(this);
 //        Icepick.restoreInstanceState(this, savedInstanceState);
     }
 
