@@ -4,9 +4,6 @@ import android.app.Application;
 
 import com.squareup.leakcanary.RefWatcher;
 
-/**
- * Created by dongyanjing on 2015/10/27.
- */
 public abstract class QuickApplication extends Application {
 
     private static QuickApplication sInstance;

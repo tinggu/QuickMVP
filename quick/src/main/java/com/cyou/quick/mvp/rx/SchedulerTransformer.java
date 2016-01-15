@@ -17,13 +17,13 @@
 package com.cyou.quick.mvp.rx;
  
 
-import com.cyou.quick.mvp.rx.lce.MvpLceRxPresenter;
+import com.cyou.quick.mvp.rx.scheduler.MvpRxPresenter;
 
 import rx.Observable;
 
 /**
  * A {@link Observable.Transformer} that is used to set the schedulers for an Observable that can
- * be subscribed by {@link MvpLceRxPresenter}.
+ * be subscribed by {@link MvpRxPresenter}.
  *
  * @author Hannes Dorfmann
  * @since 1.0.0

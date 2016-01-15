@@ -31,7 +31,8 @@ import com.cyou.quick.mvp.MvpView;
  * @see ActivityMvpDelegate
  * @since 1.1.0
  */
-public class ActivityMvpDelegateImpl<V extends MvpView, P extends MvpPresenter<V>> implements ActivityMvpDelegate {
+public class ActivityMvpDelegateImpl<V extends MvpView, P extends MvpPresenter<V>>
+        implements ActivityMvpDelegate {
 
     protected MvpInternalDelegate<V, P> internalDelegate;
     protected MvpDelegateCallback<V, P> delegateCallback;

@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 tinggu.
+ * Copyright 2015 Hannes Dorfmann.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,20 +18,20 @@ package com.cyou.quick.mvp;
 
 import android.os.Bundle;
 
-import com.cyou.quick.QuickActivity;
+import com.cyou.quick.QuickCompatActivity;
 import com.cyou.quick.mvp.delegate.ActivityMvpDelegate;
 import com.cyou.quick.mvp.delegate.ActivityMvpDelegateImpl;
 import com.cyou.quick.mvp.delegate.MvpDelegateCallback;
 
 /**
- * A {@link QuickActivity} that uses an {@link MvpPresenter} to implement a Model-View-Presenter
+ * A {@link QuickCompatActivity} that uses an {@link MvpPresenter} to implement a Model-View-Presenter
  * Architecture.
  *
  * @author tinggu
  * @since 1.0.0
  */
-public abstract class MvpActivity<V extends MvpView, P extends MvpPresenter<V>>
-        extends QuickActivity
+public abstract class MvpCompatActivity<V extends MvpView, P extends MvpPresenter<V>>
+        extends QuickCompatActivity
         implements MvpDelegateCallback<V, P>, MvpView {
 
     protected ActivityMvpDelegate mvpDelegate;
