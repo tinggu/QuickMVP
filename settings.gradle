@@ -1,1 +1,1 @@
-include ':app', ':quick'
+include ':app', ':mvp-common', ':mvp-rx', ':mvp-lce'

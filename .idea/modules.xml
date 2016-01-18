@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/QuickMVP.iml" filepath="$PROJECT_DIR$/QuickMVP.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/quick/quick.iml" filepath="$PROJECT_DIR$/quick/quick.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mvp-common/mvp-common.iml" filepath="$PROJECT_DIR$/mvp-common/mvp-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mvp-lce/mvp-lce.iml" filepath="$PROJECT_DIR$/mvp-lce/mvp-lce.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mvp-rx/mvp-rx.iml" filepath="$PROJECT_DIR$/mvp-rx/mvp-rx.iml" />
     </modules>
   </component>
 </project>
