@@ -23,5 +23,5 @@ android {
 }
 
 dependencies {
-    compile project(':mvp-rx')
+    compile project(':mvp-common')
 }
