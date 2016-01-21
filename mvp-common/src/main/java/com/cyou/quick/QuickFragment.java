@@ -16,6 +16,7 @@
 package com.cyou.quick;
 
 import android.os.Bundle;
+import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -27,18 +28,9 @@ import butterknife.ButterKnife;
 public abstract class QuickFragment extends Fragment {
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-        int layoutRes = getLayoutRes();
-        if (layoutRes == 0) {
-            throw new IllegalArgumentException(
-                    "getLayoutRes() returned 0, which is not allowed. "
-                            + "If you don't want to use getLayoutRes() but implement your own view for this "
-                            + "fragment manually, then you have to override onCreateView();");
-        } else {
-            View v = inflater.inflate(layoutRes, container, false);
-            return v;
-        }
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(getLayoutRes(), container, false);
     }
 
     @Override
@@ -50,8 +42,13 @@ public abstract class QuickFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        ButterKnife.unbind(this);
         QuickApplication.getInstance().getRefWatcher().watch(this);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        ButterKnife.unbind(this);
     }
 
     /**
@@ -59,7 +56,6 @@ public abstract class QuickFragment extends Fragment {
      *
      * @return the layout resource or null, if you don't want to have an UI
      */
-    protected int getLayoutRes() {
-        return 0;
-    }
+    @LayoutRes
+    protected abstract int getLayoutRes();
 }

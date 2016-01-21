@@ -107,11 +107,6 @@ public abstract class MvpFragment<V extends MvpView, P extends MvpPresenter<V>>
     }
 
     @Override
-    public boolean getUserVisibleHint() {
-        return super.getUserVisibleHint();
-    }
-
-    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getMvpDelegate().onCreate(savedInstanceState);
@@ -121,11 +116,6 @@ public abstract class MvpFragment<V extends MvpView, P extends MvpPresenter<V>>
     public void onDestroy() {
         super.onDestroy();
         getMvpDelegate().onDestroy();
-    }
-
-    @Override
-    protected int getLayoutRes() {
-        return super.getLayoutRes();
     }
 
     @Override
