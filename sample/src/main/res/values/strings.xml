@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MrBaozi</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="about_app">关于</string>
+    <string name="source_code_name">Assassinss / pretty-girl</string>
+    <string name="source_code_address_declare">项目源代码的github 地址</string>
+</resources>

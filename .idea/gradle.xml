@@ -8,19 +8,19 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/mvp-common" />
             <option value="$PROJECT_DIR$/mvp-lce" />
             <option value="$PROJECT_DIR$/mvp-rx" />
+            <option value="$PROJECT_DIR$/sample" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/mvp-common" />
             <option value="$PROJECT_DIR$/mvp-lce" />
             <option value="$PROJECT_DIR$/mvp-rx" />
+            <option value="$PROJECT_DIR$/sample" />
           </set>
         </option>
       </GradleProjectSettings>
