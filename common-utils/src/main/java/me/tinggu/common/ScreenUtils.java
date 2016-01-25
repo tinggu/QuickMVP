@@ -1,4 +1,4 @@
-package me.tinggu.sample.common.utils;
+package me.tinggu.common;
 
 import android.content.Context;
 import android.util.DisplayMetrics;

@@ -24,6 +24,7 @@ dependencies {
     compile 'com.android.support:design:23.1.1'
 
     compile project(':mvp-rx')
+    compile project(':common-utils')
     //rxlifecycle
     compile 'com.trello:rxlifecycle:0.3.0'
     compile 'com.trello:rxlifecycle-components:0.3.0'

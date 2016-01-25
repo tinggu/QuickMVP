@@ -1,1 +1,1 @@
-include ':mvp-common', ':mvp-rx', ':mvp-lce', ':sample'
+include ':mvp-common', ':mvp-rx', ':mvp-lce', ':sample', ':common-utils'

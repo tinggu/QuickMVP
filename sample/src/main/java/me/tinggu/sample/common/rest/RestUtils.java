@@ -13,9 +13,9 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
+import me.tinggu.common.LogUtils;
 import me.tinggu.sample.common.AppConstants;
 import me.tinggu.sample.common.ServerConstants;
-import me.tinggu.sample.common.utils.LogUtils;
 import okio.BufferedSink;
 import okio.GzipSink;
 import okio.Okio;
