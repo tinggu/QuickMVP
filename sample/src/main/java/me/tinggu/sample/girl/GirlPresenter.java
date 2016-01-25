@@ -4,9 +4,9 @@ import com.cyou.quick.mvp.rx.scheduler.MvpRxPresenter;
 
 import java.util.List;
 
+import me.tinggu.common.LogUtils;
 import me.tinggu.sample.api.GirlApi;
 import me.tinggu.sample.common.rest.RestUtils;
-import me.tinggu.sample.common.utils.LogUtils;
 import me.tinggu.sample.model.PrettyGirl;
 
 

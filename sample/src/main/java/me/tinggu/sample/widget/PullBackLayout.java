@@ -12,7 +12,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import me.tinggu.sample.common.utils.ScreenUtils;
+import me.tinggu.common.ScreenUtils;
 
 public class PullBackLayout extends FrameLayout{
 

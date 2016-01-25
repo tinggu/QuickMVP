@@ -26,11 +26,11 @@ import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.tinggu.common.NetUtils;
 import me.tinggu.sample.R;
 import me.tinggu.sample.adapter.GirlAdapter;
 import me.tinggu.sample.api.GirlApi;
 import me.tinggu.sample.common.rest.RestUtils;
-import me.tinggu.sample.common.utils.NetUtils;
 import me.tinggu.sample.girl.PictureActivity;
 import me.tinggu.sample.model.PrettyGirl;
 import rx.android.schedulers.AndroidSchedulers;
