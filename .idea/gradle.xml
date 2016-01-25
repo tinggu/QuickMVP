@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/common-utils" />
             <option value="$PROJECT_DIR$/mvp-common" />
             <option value="$PROJECT_DIR$/mvp-lce" />
+            <option value="$PROJECT_DIR$/mvp-loadmore" />
             <option value="$PROJECT_DIR$/mvp-rx" />
             <option value="$PROJECT_DIR$/sample" />
           </set>
@@ -21,6 +22,7 @@
             <option value="$PROJECT_DIR$/common-utils" />
             <option value="$PROJECT_DIR$/mvp-common" />
             <option value="$PROJECT_DIR$/mvp-lce" />
+            <option value="$PROJECT_DIR$/mvp-loadmore" />
             <option value="$PROJECT_DIR$/mvp-rx" />
             <option value="$PROJECT_DIR$/sample" />
           </set>
