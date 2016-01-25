@@ -23,7 +23,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
 
-    compile project(':mvp-rx')
+    compile project(':mvp-loadmore')
     compile project(':common-utils')
     //rxlifecycle
     compile 'com.trello:rxlifecycle:0.3.0'
