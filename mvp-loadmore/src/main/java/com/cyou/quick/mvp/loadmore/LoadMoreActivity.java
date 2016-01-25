@@ -3,7 +3,7 @@ package com.cyou.quick.mvp.loadmore;
 import android.view.View;
 
 import com.cyou.quick.mvp.MvpPresenter;
-import com.cyou.quick.mvp.viewstate.lce.MvpLceViewStateActivity;
+import com.cyou.quick.mvp.lce.MvpLceActivity;
 
 /**
  * Description:
@@ -13,7 +13,7 @@ import com.cyou.quick.mvp.viewstate.lce.MvpLceViewStateActivity;
  * Date       : 2015/7/8 14:16
  */
 public abstract class LoadMoreActivity<CV extends View, M, V extends LoadMoreView<M>, P extends MvpPresenter<V>>
-        extends MvpLceViewStateActivity<CV, M, V, P> implements LoadMoreView<M> {
+        extends MvpLceActivity<CV, M, V, P> implements LoadMoreView<M> {
 
 
 }
