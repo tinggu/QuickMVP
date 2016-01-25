@@ -1,4 +1,4 @@
-package com.cyou.quick.mvp.load;
+package com.cyou.quick.mvp.loadmore;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
