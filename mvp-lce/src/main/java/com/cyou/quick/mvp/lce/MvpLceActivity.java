@@ -49,14 +49,16 @@ public abstract class MvpLceActivity<CV extends View, M, V extends MvpLceView<M>
 
     protected View loadingView;
     protected CV contentView;
-    protected TextView errorView;
+    protected View errorView;
+    protected TextView errorTextView;
 
     @Override
     public void onContentChanged() {
         super.onContentChanged();
         loadingView = findViewById(R.id.loadingView);
         contentView = (CV) findViewById(R.id.contentView);
-        errorView = (TextView) findViewById(R.id.errorView);
+        errorView = findViewById(R.id.errorView);
+        errorTextView = (TextView) errorView.findViewById(R.id.errorTextView);
 
         if (loadingView == null) {
             throw new NullPointerException(
@@ -148,7 +150,7 @@ public abstract class MvpLceActivity<CV extends View, M, V extends MvpLceView<M>
         if (pullToRefresh) {
             showLightError(errorMsg);
         } else {
-            errorView.setText(errorMsg);
+            errorTextView.setText(errorMsg);
             animateErrorViewIn();
         }
     }
