@@ -138,7 +138,8 @@ public abstract class MvpLceActivity<CV extends View, M, V extends MvpLceView<M>
      * error).
      * Override this method if you want to display the light error in another way (like crouton).
      */
-    protected void showLightError(String msg) {
+    @Override
+    public void showTip(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 
@@ -148,7 +149,7 @@ public abstract class MvpLceActivity<CV extends View, M, V extends MvpLceView<M>
         String errorMsg = getErrorMessage(e, pullToRefresh);
 
         if (pullToRefresh) {
-            showLightError(errorMsg);
+            showTip(errorMsg);
         } else {
             errorTextView.setText(errorMsg);
             animateErrorViewIn();

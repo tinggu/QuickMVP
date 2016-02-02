@@ -88,4 +88,7 @@ public interface MvpLceView<M> extends MvpView {
      */
     void loadData(boolean pullToRefresh);
     
+    
+    void showTip(String message);
+    
 }
