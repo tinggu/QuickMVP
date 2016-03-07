@@ -31,7 +31,4 @@ ext {
     appcompat7Version = '23.1.1'
     supportAnnotations = '23.1.1'
     recyclerviewVersion = '23.1.1'
-    
-
-    
 }

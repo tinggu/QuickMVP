@@ -1,14 +1,5 @@
 package me.tinggu.sample.common.rest;
 
-import com.squareup.okhttp.Headers;
-import com.squareup.okhttp.Interceptor;
-import com.squareup.okhttp.MediaType;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.RequestBody;
-import com.squareup.okhttp.Response;
-import com.squareup.okhttp.ResponseBody;
-
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
@@ -16,12 +7,22 @@ import java.util.logging.Logger;
 import me.tinggu.common.LogUtils;
 import me.tinggu.sample.common.AppConstants;
 import me.tinggu.sample.common.ServerConstants;
+
+import okhttp3.Headers;
+import okhttp3.Interceptor;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
+import okhttp3.ResponseBody;
 import okio.BufferedSink;
 import okio.GzipSink;
 import okio.Okio;
-import retrofit.GsonConverterFactory;
-import retrofit.Retrofit;
-import retrofit.RxJavaCallAdapterFactory;
+
+import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RestUtils implements AppConstants, ParameterKeys, ServerConstants {
 
@@ -48,18 +49,18 @@ public class RestUtils implements AppConstants, ParameterKeys, ServerConstants {
         builder.client(getOkHttpClient());
         return builder.build();
     }
-
-//    private static Interceptor getRequestInterceptor() {
-////        return  new GzipRequestInterceptor();
-//
-//        return new Interceptor() {
-//            @Override
-//            public Response intercept(Chain chain) throws IOException {
-//                Request request = chain.request();
-//                if ("GET".equals(request.method())) {
-//                    return chain.proceed(request);
-//                }
-//                String url = request.urlString();
+    
+    
+    //        return  new GzipRequestInterceptor();
+    private static Interceptor getRequestInterceptor() {
+        return new Interceptor() {
+            @Override
+            public Response intercept(Chain chain) throws IOException {
+                Request request = chain.request();
+                if ("GET".equals(request.method())) {
+                    return chain.proceed(request);
+                }
+//                String url = request.url().toString();
 //                url = url.substring(API_BASE_URL.length());
 //                RequestBody body = request.body();
 //                CacheBufferdSkin cache = new CacheBufferdSkin();
@@ -80,9 +81,9 @@ public class RestUtils implements AppConstants, ParameterKeys, ServerConstants {
 //                    newRequestBuilder.method(request.method(), body);
 //                }
 //                request = newRequestBuilder.build();
-//                loggerRequest(request);
-//                Response response = chain.proceed(request);
-//                response = loggerResponse(request, response);
+                loggerRequest(request);
+                Response response = chain.proceed(request);
+                response = loggerResponse(request, response);
 //                if (isSafeUrl[1]) {
 //                    String resBody = response.body().toString();
 //                    String decryptBody = decryptBody(resBody, secretKey);
@@ -91,17 +92,17 @@ public class RestUtils implements AppConstants, ParameterKeys, ServerConstants {
 //                    response = newBuilderder.build();
 //                    response = loggerResponse(request, response);
 //                }
-//                return response;
-//            }
-//        };
-//    }
+                return response;
+            }
+        };
+    }
 
 
     private static Response loggerResponse(Request request, Response response) {
         try {
             if (LogUtils.DEBUG_ENABLED) {
                 StringBuilder sb = new StringBuilder();
-                String url = request.urlString();
+                String url = request.url().toString();
                 Long start = System.currentTimeMillis();
                 sb.append("---------------------request--------------------------------")
                         .append("\nrequest-->url").append("|").append(url)
@@ -138,7 +139,7 @@ public class RestUtils implements AppConstants, ParameterKeys, ServerConstants {
     private static void loggerRequest(Request request) {
         if (LogUtils.DEBUG_ENABLED) {
             try {
-                String url = request.urlString();
+                String url = request.url().toString();
                 CacheBufferdSkin cache = new CacheBufferdSkin();
                 request.body().writeTo(cache);
                 String strBody = cache.bodyStr;
@@ -152,11 +153,13 @@ public class RestUtils implements AppConstants, ParameterKeys, ServerConstants {
 
     public static OkHttpClient getOkHttpClient() {
         if (okHttpClient == null) {
-            okHttpClient = new OkHttpClient();
+
 //            File cacheDir = new File(context.getCacheDir(), RESPONSE_CACHE);
 //            okHttpClient.setCache(new Cache(cacheDir, RESPONSE_CACHE_SIZE));
-            okHttpClient.setConnectTimeout(HTTP_CONNECT_TIMEOUT, TimeUnit.MILLISECONDS);
-            okHttpClient.setReadTimeout(HTTP_READ_TIMEOUT, TimeUnit.MILLISECONDS);
+            OkHttpClient.Builder builder = new OkHttpClient.Builder();
+            okHttpClient =  builder.readTimeout(HTTP_READ_TIMEOUT, TimeUnit.MILLISECONDS).
+                    connectTimeout(HTTP_READ_TIMEOUT, TimeUnit.MILLISECONDS).build();
+            okHttpClient = new OkHttpClient();
 
 //            okHttpClient.interceptors().add(getRequestInterceptor());
         }

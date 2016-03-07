@@ -3,8 +3,8 @@ package me.tinggu.sample.api;
 import java.util.List;
 
 import me.tinggu.sample.model.PrettyGirl;
-import retrofit.http.GET;
-import retrofit.http.Query;
+import retrofit2.http.GET;
+import retrofit2.http.Query;
 import rx.Observable;
 
 public interface GirlApi {

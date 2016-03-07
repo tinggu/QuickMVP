@@ -16,8 +16,8 @@ and:
 
 ```gradle
 dependencies {
-    compile 'com.github.tinggu.QuickMVP:mvp-common:1.0.4'
-    compile 'com.github.tinggu.QuickMVP:mvp-lce:1.0.4'
-    compile 'com.github.tinggu.QuickMVP:mvp-rx:1.0.4'
+    compile 'com.github.tinggu.QuickMVP:mvp-common:1.1.1'
+    compile 'com.github.tinggu.QuickMVP:mvp-lce:1.1.1'
+    compile 'com.github.tinggu.QuickMVP:mvp-rx:1.1.1'
 }
 ```
