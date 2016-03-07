@@ -20,4 +20,4 @@ dependencies {
     compile 'com.github.tinggu.QuickMVP:mvp-lce:1.1.1'
     compile 'com.github.tinggu.QuickMVP:mvp-rx:1.1.1'
 }
-```
+
