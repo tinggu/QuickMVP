@@ -22,7 +22,9 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:' + rootProject.ext.appcompat7Version
+    provided 'com.android.support:appcompat-v7:' + rootProject.ext.appcompat7Version
+    provided 'com.android.support:recyclerview-v7:' + rootProject.ext.appcompat7Version
+    
     //log工具
 //    compile 'com.orhanobut:logger:1.11'
     compile 'com.github.tinggu:logger:1.1.5'

@@ -28,7 +28,5 @@ ext {
     javaTargetCompatibility = JavaVersion.VERSION_1_7
 
     // Libraries
-    appcompat7Version = '23.1.1'
-    supportAnnotations = '23.1.1'
-    recyclerviewVersion = '23.1.1'
+    appcompat7Version = '23.2.0'
 }
