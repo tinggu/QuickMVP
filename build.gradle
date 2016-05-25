@@ -5,7 +5,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.0'
+        classpath 'com.android.tools.build:gradle:2.1.0'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
 
     }
@@ -28,5 +28,5 @@ ext {
     javaTargetCompatibility = JavaVersion.VERSION_1_7
 
     // Libraries
-    appcompat7Version = '23.2.0'
+    appcompat7Version = '23.2.1'
 }

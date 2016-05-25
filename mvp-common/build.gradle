@@ -23,11 +23,9 @@ android {
 }
 
 dependencies {
-    provided 'com.android.support:appcompat-v7:' + rootProject.ext.appcompat7Version
-    provided 'com.android.support:recyclerview-v7:' + rootProject.ext.appcompat7Version
-    provided 'com.android.support:design:' + rootProject.ext.appcompat7Version
+    compile 'com.android.support:appcompat-v7:' + rootProject.ext.appcompat7Version 
     
     provided 'com.squareup.leakcanary:leakcanary-android-no-op:1.3.1'
 
-    compile 'com.jakewharton:butterknife:7.0.1'
+    provided 'com.jakewharton:butterknife:7.0.1'
 }
