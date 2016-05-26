@@ -16,7 +16,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import me.tinggu.sample.R;
 import me.tinggu.sample.adapter.GirlAdapter;
 import me.tinggu.sample.base.BaseLceFragment;
@@ -33,7 +33,7 @@ public class GirlFragment
         extends BaseLceFragment<List<PrettyGirl>, GirlView, GirlPresenter>
         implements GirlView {
 
-    @Bind(R.id.recyclerView)
+    @BindView(R.id.recyclerView)
     RecyclerView mRecyclerView;
 
     private GirlAdapter mGirlAdapter;

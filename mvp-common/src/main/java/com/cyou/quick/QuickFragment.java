@@ -45,11 +45,12 @@ public abstract class QuickFragment extends Fragment {
         QuickApplication.getInstance().getRefWatcher().watch(this);
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        ButterKnife.unbind(this);
-    }
+//    @Override
+//    public void onDestroyView() {
+//        super.onDestroyView();
+//         
+//        ButterKnife.unbind(this);
+//    }
 
     /**
      * Return the layout resource like R.layout.my_layout
